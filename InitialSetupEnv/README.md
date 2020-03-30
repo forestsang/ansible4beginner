@@ -7,6 +7,7 @@
  contorl machine vm network settting에서 bridge network 선택
  
  control machine vm을 start 시킨 후, 아래 package install
+ 
  2.1 sudo apt install net-tools
  설치 시 lock 관련 파일 에러가 발생하였으며 해당 파일을 'rm /var/lib/dpkg/lockforntend' 로 삭제 후 정상설치
  
