@@ -21,6 +21,7 @@ node1 | UNREACHABLE! => {
 
 여기서 key 저장 여부를 묻는 단계를 없애고자 한다면, 환경변수 NSIBLE_HOST_KEY_CHECKING=False 을 선언하거나, ansible.cfg 파일에 'host_key_checking = False' 을 추가한다.
 
+$ rm ~/.ssh/known_hosts
 $ ANSIBLE_HOST_KEY_CHECKING=False ansible all -m ping
 
 (venv29) tester@ansible-c:~/ansible/Lab/01.validating/01$ ansible all -m ping
@@ -37,6 +38,7 @@ inventory = hosts
 host_key_checking = False
 (venv29) tester@ansible-c:~/ansible/Lab/01.validating/01$
 
+$ rm ~/.ssh/known_hosts
 $ ansible all -m ping
 
 (venv29) tester@ansible-c:~/ansible/Lab/01.validating/01$ ansible all -m ping
