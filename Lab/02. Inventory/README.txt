@@ -22,3 +22,5 @@
  - hosts 파일에 [web:vars]에 ansible_port을 정의함으로써 [all:vars]에 정의된 ansible_port가 override 되어 정상적으로 ping 성공
  
 08.
+ - Step 07 inventory 파일을 YAML 형식으로 변경 후, ping 테스트
+ 
