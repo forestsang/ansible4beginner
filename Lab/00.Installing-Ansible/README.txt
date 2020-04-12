@@ -1,5 +1,7 @@
 Ansible 설치는 Ubuntu linux 기준이며, 아래 세 가지 방법중에 하나를 택하여 설치할 수 있다. 
-개인적으로 가장 좋은 방법이라 생각되는 것은 3번째 VirutalEnv 환경을 구성하여 PIP을 통해 설치하는 방법인데, 이는 하나의 장비에서 python 개발시 서로 다른 버전으로 개발하는 한경을 지원되는 VirtulEnv환경에서 다른 버전이나 환경에 영향을 받지 않고 개발할 수 있는 강점이 있기 때문이다.
+개인적으로 가장 좋은 방법이라 생각되는 것은 3번째 VirutalEnv 환경을 구성하여 PIP을 통해 설치하는 방법인데, 
+이는 하나의 장비에서 python 개발시 서로 다른 버전으로 개발하는 한경을 지원되는 VirtulEnv환경에서 
+다른 버전이나 환경에 영향을 받지 않고 개발할 수 있는 강점이 있기 때문이다.
 
 1. APT
 # APT: Advanced Packing Tool 의 약자로 Ubuntu나 Debian (계열) linux에서 사용되는 package 관리 툴
