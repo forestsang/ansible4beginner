@@ -1,0 +1,6 @@
+
+[web]
+web1 ansible_host=192.168.56.11 ansible_become=true ansible_become_pass=welcome1
+
+[db]
+192.168.56.12
