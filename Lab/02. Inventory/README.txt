@@ -17,3 +17,8 @@
 
 06. 
  - hosts 파일에 [all:vars]에 ansible_port=7777 을 작용하여 control node을 제외한 모든 서버들에 대한 ping 테스트가 실패하는 것을 확인
+
+07.
+ - hosts 파일에 [web:vars]에 ansible_port을 정의함으로써 [all:vars]에 정의된 ansible_port가 override 되어 정상적으로 ping 성공
+ 
+08.
