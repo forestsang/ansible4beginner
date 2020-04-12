@@ -20,6 +20,7 @@ $ sudo apt-get install ansible
 $ ansible --version
 
 3. VitualEnv with PIP (python package index)
+# PIP: Python package 설치 시 사용되는 tool
 
 $ sudo apt-get update
 $ sudo apt-get install python-minimal virtualenv python-dev build-essential
