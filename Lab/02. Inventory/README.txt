@@ -16,3 +16,4 @@
  - vars 을 이용하여 variable 을 선언하여 특정 서버에 해당 옵션이 적용되도록 정의한다.
 
 06. 
+ - hosts 파일에 [all:vars]에 ansible_port=7777 을 작용하여 control node을 제외한 모든 서버들에 대한 ping 테스트가 실패하는 것을 확인
