@@ -4,7 +4,7 @@ Ansible 설치는 Ubuntu linux 기준이며, 아래 세 가지 방법중에 하�
 다른 버전이나 환경에 영향을 받지 않고 개발할 수 있는 강점이 있기 때문이다.
 
 1. APT
-# APT: Advanced Packing Tool 의 약자로 Ubuntu나 Debian (계열) linux에서 사용되는 package 관리 툴
+# APT: Advanced Packing Tool 의 약자로 Debian (계열) linux에서 사용되는 package 관리 툴
 
 $ sudo apt-get update
 $ sudo apt install ansible
