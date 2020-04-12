@@ -1,7 +1,7 @@
 (venv29) tester@ansible-c:~/ansible/Lab/02.inventory/04$ cat hosts
 
 [web]
-web1 ansible_host=192.168.56.11 ansible_become=true ansible_become_pass=welcome1
+web1 ansible_host=192.168.56.11 ansible_become_user=root ansible_become_password=welcome1
 
 [db]
 192.168.56.12
