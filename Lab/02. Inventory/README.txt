@@ -8,3 +8,7 @@
  - hosts 파일에 대표 이름으로 정의하여 테스트 
  - 예: [webservers], [db]
 
+04. 
+ - hosts 파일에 ansible_become_user, ansible_become_password을 추가하여 root 권한 획득 예제
+
+05.
