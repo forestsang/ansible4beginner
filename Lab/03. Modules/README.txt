@@ -23,7 +23,8 @@ host_key_checking = False
 
 - Command modules
  1. $ ansible all -m command -a 'hostname' -o
- 2. $ ansible all -a 'hostname' -o # command module의 경우, '-m command'을 명시해주지 않아도 command module이 동작한다.
+ # command module의 경우, '-m command'을 명시해주지 않아도 command module이 동작한다.
+ 2. $ ansible all -a 'hostname' -o 
  
 - Files modules
  1. $ ansible all -m file -a 'path=/tmp/x state=touch' -o 
