@@ -12,3 +12,7 @@
  - hosts 파일에 ansible_become_user, ansible_become_password을 추가하여 root 권한 획득 예제
 
 05.
+ - hosts 파일에 ansible_connection=local을 선언한다. 이는 local connect의 경우, SSH 통신을 하지 않는다.
+ - vars 을 이용하여 variable 을 선언하여 특정 서버에 해당 옵션이 적용되도록 정의한다.
+
+06. 
