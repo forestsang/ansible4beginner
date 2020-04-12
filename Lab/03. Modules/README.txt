@@ -30,11 +30,14 @@ host_key_checking = False
  2. $ ansible all -m file -a 'path=/tmp/x state=file mode=600' -o
  3. $ touch /tmp/copy-me.txt
  4. $ ansible all -m copy -a 'src=/tmp/copy-me.txt dest=/tmp/copy-me.txt'
- # 한번 더 시도해서 output이 초록색 (unchanged) 인 것을 확인 - Idempotency (PPT)
  5. $ ansible all -m copy -a 'src=/tmp/copy-me.txt dest=/tmp/copy-me.txt'
+ # 한번 더 시도한 이유는 output이 초록색 (unchanged) 인 것을 확인 - Idempotency (PPT)
  # 생성한 파일을 삭제
  6. $ ansible all -m file -a 'path=/tmp/copy-me.txt state=absent'
  7. $ ansible all -m file -a 'path=/tmp/x state=absent'
+ 
+- ansible-doc command로 option 확인
+ 1. $ ansible-doc file
  
  
  
