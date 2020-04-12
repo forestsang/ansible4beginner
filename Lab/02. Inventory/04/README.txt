@@ -13,6 +13,8 @@ host_key_checking = False
 
 
 # web node로 ssh로 connect 후 sudo - root 로 root 권한 획득
+# ansible_become_pass 에서 root password가 plain text 로 정의되어 있지만, ansible vault 을 이용하여 암호화할 수 있다.
+
 $ ansible web -m ping
 
 (venv29) tester@ansible-c:~/ansible/Lab/02.inventory/04$ ansible web -m ping
