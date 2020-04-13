@@ -1,0 +1,16 @@
+[control]
+control-node ansible_connection=local
+
+[web]
+web1 ansible_host=192.168.56.11
+
+[web:vars]
+ansible_become_user=root
+ansible_become_password=welcome1
+ansible_port=22
+
+[db]
+192.168.56.12
+
+[all:vars]
+ansible_port=7777
