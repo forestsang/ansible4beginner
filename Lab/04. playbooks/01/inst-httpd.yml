@@ -1,0 +1,16 @@
+---
+-
+  hosts: web
+  become: yes
+  tasks:
+    -
+      name: "ensure nginx is at the latest version"
+      apt:
+        name: nginx
+        state: latest
+    -
+      name: "ensure ngnix is running"
+      service:
+        name: nginx
+        state: started
+
