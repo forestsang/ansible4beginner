@@ -1,19 +1,67 @@
-01. nginx 설치 및 제거
+1. $ ansible-playbook inst-httpd.yml
+   http://192.168.56.11
+2. $ ansible-playbook uninst-httpd.yml
+   http://192.168.56.11
+   
 
-02. simple web 구현
- - python dependency package 설치
- - pymysql을 pip 으로 설치
- - MySQL 설치 by apt
- - database 시작
- - application database 생성
- - database user 생성
- - sample data용 file copy
- - sample data을 application database에 import
- - python flask 설치
- - python sample program 복사
- - Web server 시작
- - 브라우저를 통해 확인
-  * http://192.168.56.11:5001/
-  * http://192.168.56.11:5001/how are you
-  * http://192.168.56.11:5001/read from database
-  
+(venv29) tester@ansible-c:~/ansible/Lab/04.playbooks/01$ cat ansible.cfg
+[defaults]
+inventory = hosts
+host_key_checking = False
+(venv29) tester@ansible-c:~/ansible/Lab/04.playbooks/01$ cat hosts
+
+[control]
+control-node ansible_connection=local
+
+[web]
+web1 ansible_host=192.168.56.11
+
+[web:vars]
+ansible_become_user=root
+ansible_become_password=welcome1
+ansible_port=22
+
+[db]
+192.168.56.12
+
+[all:vars]
+ansible_port=7777
+
+(venv29) tester@ansible-c:~/ansible/Lab/04.playbooks/01$
+
+(venv29) tester@ansible-c:~/ansible/Lab/04.playbooks/01$ cat inst-httpd.yml
+---
+-
+  hosts: web
+  become: yes
+  tasks:
+    -
+      name: "ensure nginx is at the latest version"
+      apt:
+        name: nginx
+        state: latest
+    -
+      name: "ensure ngnix is running"
+      service:
+        name: nginx
+        state: started
+
+(venv29) tester@ansible-c:~/ansible/Lab/04.playbooks/01$ cat uninst-httpd.yml
+---
+-
+  hosts: web
+  become: yes
+  tasks:
+    -
+      name: "stop nginx"
+      service:
+        name: nginx
+        state: stopped
+    -
+      name: "ensure ngnix is not installed"
+      apt:
+        name: nginx
+        state: absent
+
+(venv29) tester@ansible-c:~/ansible/Lab/04.playbooks/01$
+
